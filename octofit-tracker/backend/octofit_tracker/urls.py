@@ -15,7 +15,27 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.http import JsonResponse
+from django.shortcuts import redirect
+import os
+
+def api_root(request):
+    codespace_name = os.environ.get('CODESPACE_NAME')
+    if codespace_name:
+        base_url = f'https://{codespace_name}-8000.app.github.dev'
+    else:
+        base_url = 'http://localhost:8000'
+    return JsonResponse({
+        'activities': f'{base_url}/api/activities/',
+        'teams': f'{base_url}/api/teams/',
+        'users': f'{base_url}/api/users/'
+    })
+
+def root_redirect(request):
+    return redirect('/api/')
 
 urlpatterns = [
+    path('', root_redirect),  # Redirect root to /api/
     path('admin/', admin.site.urls),
+    path('api/', api_root),
 ]
