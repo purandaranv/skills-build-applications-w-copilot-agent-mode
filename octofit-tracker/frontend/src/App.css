@@ -1,0 +1,137 @@
+
+.App {
+  text-align: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  color: #22223b;
+}
+
+/* Logo styling */
+.App-logo {
+  height: 60px;
+  pointer-events: none;
+  margin-right: 20px;
+  float: left;
+}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Header styling */
+.App-header {
+  background: linear-gradient(90deg, #8ecae6 0%, #219ebc 100%);
+  min-height: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(12px + 2vmin);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(33, 158, 188, 0.1);
+  padding: 0 40px;
+}
+}
+
+/* Link styling */
+.App-link {
+  color: #ffb703;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.App-link:hover {
+  color: #fb8500;
+}
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(33, 158, 188, 0.08);
+}
+
+th, td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #8ecae6;
+  text-align: left;
+}
+
+th {
+  background: #219ebc;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+tr:nth-child(even) {
+  background: #f5f7fa;
+}
+
+tr:hover {
+  background: #caf0f8;
+}
+/* Button styling */
+button, .btn {
+  background: linear-gradient(90deg, #ffb703 0%, #fb8500 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 8px 0;
+  box-shadow: 0 2px 6px rgba(251, 133, 0, 0.08);
+  transition: background 0.2s, transform 0.2s;
+}
+
+button:hover, .btn:hover {
+  background: linear-gradient(90deg, #fb8500 0%, #ffb703 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+/* Heading styling */
+h1, h2, h3, h4, h5, h6 {
+  color: #219ebc;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+}
+/* Navigation menu styling */
+.nav {
+  display: flex;
+  gap: 24px;
+  background: #023047;
+  padding: 16px 40px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 8px rgba(2, 48, 71, 0.08);
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav a:hover {
+  background: #219ebc;
+  color: #ffb703;
+}
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
